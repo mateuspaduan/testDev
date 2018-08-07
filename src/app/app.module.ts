@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductServiceProvider } from '../providers/product-service/product-service';
 import { DataProvider } from '../providers/data/data';
 
+import { NgxPaginationModule } from 'ngx-pagination';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -19,7 +21,8 @@ import { DataProvider } from '../providers/data/data';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

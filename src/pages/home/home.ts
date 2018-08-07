@@ -26,6 +26,8 @@ export class HomePage {
 
   searchTerm: string = '';
 
+  pageSize: any = 5;
+
   constructor(public navCtrl: NavController, 
               public httpClient: HttpClient, 
               public productService: ProductServiceProvider,
@@ -48,7 +50,7 @@ export class HomePage {
   }
 
   setFilteredItems() {
-    
+
     if(this.searchTerm == ''){
 
       this.getProds();

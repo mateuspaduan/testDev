@@ -8,7 +8,15 @@
 
 <ion-content padding>
     <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()"></ion-searchbar>
-  <ion-list>
+    <ion-item *ngFor="let product of products">
+        <div class="row">
+          <div class="col" text-center>{{product.productName}}</div>
+          <div class="col" text-center>{{product.productDescription}}</div>
+          <div class="col" text-center>{{product.productPrice}}</div>
+          <div class="col" text-center>{{product.productActualPrice}}</div>
+         </div>           
+    </ion-item>
+  <!-- <ion-list>
     <ion-label>Produtos</ion-label>
     <ion-item *ngFor="let product of products">
       <h2>Nome: {{product.productName}}</h2>
@@ -16,5 +24,5 @@
       <p>De: {{product.productPrice}}</p>
       <p>Por: {{product.productActualPrice}}</p>
     </ion-item>
-  </ion-list>
+  </ion-list> -->
 </ion-content>
