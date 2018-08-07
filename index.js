@@ -7,7 +7,8 @@ var express = require('express'),
 
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/Tododb'); 
+var mongoDB = 'mongodb://mateuspaduan:almostadmin2@ds115762.mlab.com:15762/testdev';
+mongoose.connect(mongoDB); 
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
