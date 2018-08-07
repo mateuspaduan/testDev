@@ -43,7 +43,7 @@ export class HomePage {
 
   getProds() {
     let data: Observable<any>;
-    data = this.httpClient.get('http://localhost:3000/tasks');
+    data = this.httpClient.get('https://test-dev-ammo.herokuapp.com/tasks');
     data.subscribe(result => {
       this.products = result;
     })
@@ -60,7 +60,7 @@ export class HomePage {
 
       let data: Observable<any>;
       //getting data to filter list
-      data = this.httpClient.get('http://localhost:3000/tasks/'+this.searchTerm);
+      data = this.httpClient.get('https://test-dev-ammo.herokuapp.com/tasks/'+this.searchTerm);
       data.subscribe(result => {
         this.products = result;
       })
